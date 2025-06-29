@@ -10,8 +10,6 @@ function Header({title}) {
     );
 }
 
-Header.defaultProps = {
-  title : "To-Do list"
-}
+
 
 export default Header
