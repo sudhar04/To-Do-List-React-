@@ -2,12 +2,13 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 import './index.css'; 
-import { useState } from 'react';
+import { useState  } from 'react';
 import AddItem from "./AddItem";
 import SearchItem from "./SearchItem";
-
+ 
 function App() {
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem("To-Do list")));
+  
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem("To-Do List")) || []);
 
   const [newItem,setNewItem] = useState('')
 

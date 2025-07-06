@@ -1,0 +1,19 @@
+{
+    "items" : [
+        {
+            "id" : 1 ,
+            "checked" : false ,
+            "item" : "reading"
+        },
+        {
+            "id" : 2,
+            "checked" : false,
+            "item" : "newspaper"
+        },
+        {
+            "id" : 3,
+            "checked" :true,
+            "item" :"workout"
+        }
+    ]
+}

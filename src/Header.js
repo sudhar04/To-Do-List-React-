@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header({title}) {
+function Header({title }) {
     return (
         <header>
           <h1>
@@ -8,10 +8,11 @@ function Header({title}) {
           </h1>
         </header>
     );
+
 }
 
-Header.defaultProps = {
-  title : "To-Do list"
-}
+//Header.defaultProps = {
+  //title : "To-Do list"
+//}
 
 export default Header
