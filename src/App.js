@@ -52,11 +52,13 @@ function App() {
       <SearchItem
         search = {search}
         setSearch = {setSearch} />
+    {items?.length > 0 &&
       <Content 
-        items ={(items || []).filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
+        items ={items .filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
         handleCheck ={handleCheck}
         handleDelete ={handleDelete}
       />
+}
       <Footer 
         length ={(items || []).length}
       />
