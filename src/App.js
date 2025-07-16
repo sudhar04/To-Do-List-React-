@@ -7,8 +7,22 @@ import AddItem from "./AddItem";
 import SearchItem from "./SearchItem";
  
 function App() {
+
+  const getLocalItems = () => {
+    try{
+      const stored = localStorage.getItem("To-Do List");
+      return stored ? JSON.parse(stored) : [];
+    } catch (err){
+      console.error("Failed to parse localStorage", err);
+      return[];
+    }
+  };
   
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem("To-Do List")) || []);
+  const [items, setItems] = useState([ {
+            id : 1 ,
+            checked : false ,
+            item : "reading"
+        }]);
 
   const [newItem,setNewItem] = useState('')
 
@@ -52,13 +66,11 @@ function App() {
       <SearchItem
         search = {search}
         setSearch = {setSearch} />
-    {items?.length > 0 &&
       <Content 
-        items ={items .filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
+        items ={(items || []).filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
         handleCheck ={handleCheck}
         handleDelete ={handleDelete}
       />
-}
       <Footer 
         length ={(items || []).length}
       />
