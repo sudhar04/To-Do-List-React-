@@ -25,7 +25,7 @@ function App() {
   const [search,setSearch] = useState('')
 
   useEffect(() => {
-    localStorage.setItem("To-Do list",JSON.stringify(items));
+    localStorage.setItem("To-Do List",JSON.stringify(items));
   }, [items]);
 
   const addItem = (item) =>{
