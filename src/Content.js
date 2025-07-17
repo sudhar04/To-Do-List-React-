@@ -5,7 +5,7 @@ const Content = ({items,handleCheck,handleDelete}) => {
   
  return (
     <main>
-      {(items.length)? (
+      {Array.isArray(items) && items.length > 0 ? (
         <Itemslist
           items ={items}
           handleCheck ={handleCheck}
