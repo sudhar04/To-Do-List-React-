@@ -10,7 +10,7 @@ function App() {
 
   const getLocalItems = () => {
     try{
-      const stored = localStorage.getItem("To-Do List");
+      const stored = localStorage.getItem("To-Do list");
       return stored ? JSON.parse(stored) : [];
     } catch (err){
       console.error("Failed to parse localStorage", err);
@@ -25,7 +25,7 @@ function App() {
   const [search,setSearch] = useState('')
 
   useEffect(() => {
-    localStorage.setItem("To-Do List",JSON.stringify(items));
+    localStorage.setItem("To-Do list",JSON.stringify(items));
   }, [items]);
 
   const addItem = (item) =>{
